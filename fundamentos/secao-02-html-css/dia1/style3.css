@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+h1 , p, li {
+    text-align: center;
+    list-style: none;
+}
+li:hover{
+    background-color: aqua;
+}
+li:active{
+    color: white;
+}

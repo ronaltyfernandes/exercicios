@@ -1,0 +1,13 @@
+let objeto={
+    autor:'ronalty',
+    sobrenome: 'fernandes',
+    idade: 22
+}
+let outroObjeto={
+    autor: 'outro',
+    sobrenome: 'santos',
+    sexo:'masculino',
+}
+
+    console.log(objeto.autor)
+    

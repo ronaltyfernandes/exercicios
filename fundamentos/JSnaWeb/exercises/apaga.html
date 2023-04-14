@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apaga</title>
+</head>
+<body>
+    <h3>lista de Compras</h3>
+        <ul id="compras"></ul>
+    
+
+
+
+
+    <script>
+        let lista = ['toucinho', ' queijo', '20 pães','requeijao de bacon','requeijao de toucinho'];
+        let listaAchar = document.getElementById('compras');
+
+        for (i = 0; i < lista.length; i ++){
+            const adiciona = document.createElement('li');
+            adiciona.innerText = lista[i];
+            adiciona.className = 'ingredientes'
+            listaAchar.appendChild(adiciona);
+                
+        }
+        let ingredientes = document.getElementsByClassName('ingredientes')
+        for (i = 0; i < ingredientes.length; i ++){
+            let recebe = ingredientes[i];
+            if (recebe.innerText.includes('toucinho')){
+
+                listaAchar.removeChild(recebe)
+            }
+        
+        
+        }
+    </script>
+</body>
+</html>

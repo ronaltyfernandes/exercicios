@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+</head>
+<body>
+    <or class="p"></or>
+    
+
+    <script>
+        let seraAdicionado = ['textos muito mais longos e grandes para encher o texto e assim eu conseguir executar com maestria o codigo', 'outro texto de igual ou semelhante tamanho para compor o meu exemplo ' ]
+        let paragrafos = document.getElementsByClassName('p')[0];
+        for( i=0; i< seraAdicionado.length;i++){
+            let xablau = document.createElement('p')
+            xablau.innerText = seraAdicionado[i];
+            paragrafos.appendChild(xablau)
+        }
+        
+    </script>
+</body>
+</html>
