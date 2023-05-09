@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paleta de Cores</title>
+  <style>
+    .color-palette div {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Paleta de Cores</h1>
+  <div class="color-palette">
+    <div style="background-color: #000000;"></div>
+    <div style="background-color: #FFC300;"></div>
+    <div style="background-color: #FF5733;"></div>
+    <div style="background-color: #C70039;"></div>
+    <div style="background-color: #900C3F;"></div>
+  </div>
+  <button id="randomize-button">Gerar cores aleatórias</button>
+
+  <script>
+    // Seleciona os elementos div da paleta de cores
+    const colorDivs = document.querySelectorAll('.color-palette div');
+    
+    // Função para gerar uma cor aleatória em formato hexadecimal
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+    
+    // Função para atualizar as cores das divisões com cores aleatórias
+    function randomizeColors() {
+      colorDivs.forEach(div => {
+        const newColor = getRandomColor();
+        div.style.backgroundColor = newColor;
+      });
+    }
+    
+    // Adiciona o evento de clique ao botão para gerar cores aleatórias
+    const randomizeButton = document.getElementById('randomize-button');
+    randomizeButton.addEventListener('click', randomizeColors);
+  </script>
+</body>
+</html>
